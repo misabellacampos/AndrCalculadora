@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="container_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="cornerRadius">-10dp</item> </style>
+
+    <style name="container_txt">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">8dp</item>
+
+
+    </style>
+    <style name="container_button_oper">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">42sp</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textStyle">bold</item>
+
+        <item name="android:textAlignment">center</item>
+        <item name="cornerRadius">-10dp</item>
+    </style>
+    <style name="botoes_func" parent="container_button">
+        <item name="backgroundTint">@color/blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">-10dp</item>
+        <item name="android:layout_margin">0dp</item>
+
+    </style>
+<style name="botoes_num" parent="container_button">
+    <item name="backgroundTint">@color/transparent</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="cornerRadius">-10dp</item>
+    <item name="android:textSize">34sp</item>
+
+</style>
+    <style name="botoes_oper" parent="container_button_oper">
+    <item name="backgroundTint">@color/transparent</item>
+     <item name="borderWidth">2dp</item>
+        <item name="android:textColor">@color/blue</item>
+    <item name="android:paddingBottom">15dp</item>
+    <item name="android:gravity">top</item>
+        <item name="android:layout_margin">0dp</item>
+
+    </style>
+    <style name="textView_valores" parent="container_txt">
+    </style>
+
+
+
+
+
+</resources>

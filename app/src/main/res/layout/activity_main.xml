@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:gravity="start"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:menu="@menu/menu">
+
+    <fragment
+        android:id="@+id/menu_fragment"
+        android:name="br.com.howads.calculadora.MenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/txt_expressao"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:ellipsize="start"
+        android:gravity="end"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/blue"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/txt_resultado"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="45sp" />
+    //primeira linha de botoes
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/botao_clear"
+            style="@style/botoes_func"
+            android:layout_weight="6"
+            android:backgroundTint="@color/transparent"
+            android:text="C"
+            android:textColor="#FF9800"
+            app:strokeWidth="3dp" />
+
+        <Button
+            android:id="@+id/abre_parentese"
+            style="@style/botoes_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="@string/abre_parentese" />
+
+        <Button
+            android:id="@+id/fecha_parentese"
+            style="@style/botoes_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="@string/fecha_Parentese" />
+
+        <Button
+            android:id="@+id/botao_divisao"
+            style="@style/botoes_oper"
+            android:layout_weight="0.34"
+            android:layout_width="wrap_content"
+            android:text="@string/dividir" />
+
+
+    </LinearLayout>
+
+    //segunda linha de botoes
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/numero1"
+            style="@style/botoes_num"
+            android:text="@string/um" />
+
+        <Button
+            android:id="@+id/numero2"
+            style="@style/botoes_num"
+            android:text="@string/dois" />
+
+        <Button
+            android:id="@+id/numero3"
+            style="@style/botoes_num"
+            android:text="@string/tres" />
+
+        <Button
+            android:id="@+id/botao_multiplicacao"
+            style="@style/botoes_oper"
+
+            android:text="@string/vezes" />
+
+    </LinearLayout>
+
+    //terceira linha de botoes
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/numero4"
+            style="@style/botoes_num"
+            android:text="@string/quatro" />
+
+        <Button
+            android:id="@+id/numero5"
+            style="@style/botoes_num"
+            android:text="@string/cinco" />
+
+        <Button
+            android:id="@+id/numero6"
+            style="@style/botoes_num"
+            android:text="@string/seis" />
+
+        <Button
+            android:id="@+id/botao_subtracao"
+            style="@style/botoes_oper"
+            android:text="@string/menos" />
+
+    </LinearLayout>
+
+    //quarta linha de botoes
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/numero7"
+            style="@style/botoes_num"
+            android:text="@string/sete" />
+
+        <Button
+            android:id="@+id/numero8"
+            style="@style/botoes_num"
+            android:text="@string/oito" />
+
+        <Button
+            android:id="@+id/numero9"
+            style="@style/botoes_num"
+            android:text="@string/nove" />
+
+        <Button
+            android:id="@+id/botao_soma"
+            style="@style/botoes_oper"
+            android:text="@string/mais" />
+
+    </LinearLayout>
+    //quinta linha de botoes
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ponto"
+
+            style="@style/botoes_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+
+            android:text="@string/ponto"
+
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/numero0"
+            style="@style/botoes_num"
+
+            android:text="@string/zero" />
+
+
+        <ImageView
+            android:id="@+id/botao_apagar"
+            style="@style/botoes_oper"
+            android:layout_width="2sp"
+            android:padding="20dp"
+            android:src="@drawable/backspace_icon_blue" />
+
+        <Button
+            android:id="@+id/botao_igual"
+            style="@style/botoes_func"
+            android:layout_marginEnd="-2dp"
+            android:layout_weight="2"
+            android:text="@string/igual"
+
+            android:textSize="40sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
